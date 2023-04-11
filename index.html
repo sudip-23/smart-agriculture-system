@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Smart Agriculture System</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<h1>Smart Agriculture System</h1>
+	</header>
+	
+	<nav>
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="#" onclick="showSensors()">Sensors</a></li>
+			<li><a href="#">Actuators</a></li>
+			<li><a href="#" onclick="showDataAnalytics()">Data Analytics</a></li>
+			<li><a href="#">Settings</a></li>
+		</ul>
+	</nav>
+	
+	<main>
+		<section id="sensor-data">
+			<h2>Sensor Data</h2>
+			<p>Temperature: <span id="temp">--</span>&deg;C</p>
+			<p>Humidity: <span id="hum">--</span>%</p>
+			<p>Soil Moisture: <span id="soil">--</span></p>
+		</section>
+
+        <section id="sensor-images" style="display:none;">
+            <h2>Sensor Images</h2>
+            <img src="temperature-sensor.jpg" alt="Temperature Sensor">
+            <img src="humidity-sensor.jpg" alt="Humidity Sensor">
+            <img src="soil-moisture-sensor.jpg" alt="Soil Moisture Sensor">
+        </section>
+
+		
+		<section id="actuators">
+			<h2>Actuators</h2>
+			<button id="water">Water Plants</button>
+			<button id="fertilize">Fertilize Plants</button>
+        </section>
+
+        <section id="data-analytics" style="display:none;">
+            <h2>Data Analytics</h2>
+
+            <p>Current Stats related to Modern Agriculture:</p>
+
+            <ul>
+                <li>The global smart agriculture market size was valued at USD 7.53 billion in 2020 and is expected to grow at a compound annual growth rate (CAGR) of 9.8% from 2021 to 2028. </li>
+
+                <li>The use of drones in agriculture has increased significantly in recent years. Drones can be used for crop monitoring, mapping, and spraying. They can also be used to collect data on soil moisture and nutrient levels. </li>
+
+                <li>The use of artificial intelligence (AI) in agriculture is also increasing. AI can be used for crop monitoring, yield prediction, and disease detection. </li>
+
+                <li>The Internet of Things (IoT) is also being used in agriculture. IoT sensors can be used to monitor soil moisture, temperature, and other environmental factors. </li>
+
+            </ul>
+
+        </section>
+
+        <script type="text/javascript">
+            function showSensors() {
+                document.getElementById("sensor-data").style.display = "none";
+                document.getElementById("sensor-images").style.display = "block";
+            }
+
+            function showDataAnalytics() {
+                document.getElementById("sensor-data").style.display = "none";
+                document.getElementById("actuators").style.display = "none";
+                document.getElementById("data-analytics").style.display = "block";
+            }
+        </script>
+
+    </main>
+
+	
+    <footer>
+        <p>&copy; 2023 Smart Agriculture System</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
